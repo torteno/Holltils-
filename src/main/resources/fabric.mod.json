@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "hollow_realms",
+  "version": "${version}",
+  "name": "Hollow Realms",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hollow_realms/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.Hollow_Realms.hollow_realms.client.Hollow_realmsClient"
+    ],
+    "main": [
+      "org.Hollow_Realms.hollow_realms.Hollow_realms"
+    ]
+  },
+  "mixins": [
+    "hollow_realms.mixins.json",
+    {
+      "config": "hollow_realms.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
